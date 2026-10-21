@@ -10,7 +10,7 @@ public class GameScore {
         Scanner gameSc = new Scanner(System.in);
 
         //*Asking for the game score
-        System.out.println("""
+        System.out.print("""
                 Enter the game Score
                 (ex;Team1:Team2|score1:socre2:
                 """);
@@ -22,12 +22,21 @@ public class GameScore {
         String[] teams = gameScore[0].split(":");
         String team1 = teams[0];
         String team2 = teams[1];
-        System.out.println("Team1: " + team1 + " Team2: " + team2);
+
 
         //*Splitting the 2 game scores
         String[] teamScore = gameScore[1].split(":");
-        String score1 = Integer.parseInt(teamScore[0]);
-        String score2 = teamScore[1];
+        int score1 = Integer.parseInt(teamScore[0]);
+        int score2 = Integer.parseInt(teamScore[1]);
+
+        //?Getting the winning team to pop up
+        if (score1 > score2) {
+            System.out.print("Winner: " + team1);
+        }else if (score1 < score2) {
+            System.out.print("Winner: " + team2);
+        }else  {
+            System.out.print("Winner: Tie!!");
+        }
 
 
 
