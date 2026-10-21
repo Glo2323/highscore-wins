@@ -12,7 +12,7 @@ public class GameScore {
         //*Asking for the game score
         System.out.print("""
                 Enter the game Score
-                (ex;Team1:Team2|score1:socre2:
+                (ex;Team1:Team2|score1:score2):
                 """);
 
         //*Splitting the teams and the game score
